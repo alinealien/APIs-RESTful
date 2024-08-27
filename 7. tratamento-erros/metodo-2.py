@@ -2,11 +2,11 @@ from flask import Flask, jsonify, abort
 
 app = Flask(__name__)
 
-@app.route('/resource')
-def get_resource():
-    resource = None  # Suponha que o recurso não foi encontrado
-    if resource:
-        return jsonify(resource), 200
+@app.route('/resources')
+def get_resources():
+    resources = None  # Suponha que o recurso não foi encontrado
+    if resources:
+        return jsonify(resources), 200
     else:
         abort(404, description="Recurso não encontrado")
 
